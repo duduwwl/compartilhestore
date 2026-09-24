@@ -90,3 +90,6 @@ button,a,input,select{touch-action:manipulation}
   .quick-add{left:7px;right:7px;bottom:7px}
   .footer__grid{gap:32px 14px}
 }
+
+/* Preserve the top of portrait hero photos so the model’s head stays in frame. */
+.hero__image img{object-position:center top}

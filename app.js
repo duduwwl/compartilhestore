@@ -29,6 +29,12 @@ const products = [
   {id:27,name:'Kit Lacoste Marinho',category:'Kits',price:159.99,image:img(27),badge:'PREMIUM',sizes:['P','M','G','GG'],description:'Polo marinho com faixa lateral, bermuda coordenada e boné branco.'}
 ];
 
+// Ordem padrão da aba “Todos”, agrupada conforme a sequência solicitada.
+// Camisas de futebol entram junto das camisetas; kits e uniformes completos,
+// junto dos conjuntos. O perfume fica intencionalmente por último.
+const featuredOrder = [2,16,9,10,19,3,4,8,5,6,7,13,14,15,17,18,20,25,26,27,21,22,11,12,1];
+const featuredPosition = new Map(featuredOrder.map((id,index)=>[id,index]));
+
 const state = { search:'', category:'Todos', checkedCategories:new Set(), sizes:new Set(), maxPrice:300, saleOnly:false, sort:'featured', cart:JSON.parse(localStorage.getItem('compartilhe-cart') || '[]'), wishlist:new Set(JSON.parse(localStorage.getItem('compartilhe-wishlist') || '[]')), activeProduct:null, activeSize:null };
 state.cart = state.cart.filter(item => products.some(product => product.id === item.id));
 const $ = s => document.querySelector(s);
@@ -53,6 +59,7 @@ function filteredProducts(){
   if(state.sort==='price-high') list.sort((a,b)=>b.price-a.price);
   if(state.sort==='name') list.sort((a,b)=>a.name.localeCompare(b.name));
   if(state.sort==='newest') list.sort((a,b)=>b.id-a.id);
+  if(state.sort==='featured') list.sort((a,b)=>(featuredPosition.get(a.id)??Infinity)-(featuredPosition.get(b.id)??Infinity));
   return list;
 }
 
