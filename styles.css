@@ -93,3 +93,14 @@ button,a,input,select{touch-action:manipulation}
 
 /* Preserve the top of portrait hero photos so the model’s head stays in frame. */
 .hero__image img{object-position:center top}
+
+/* Clear, familiar three-line control and a more descriptive featured-product card. */
+.menu-btn .menu-icon{width:22px;height:22px;stroke-width:1.8}
+.hero__copy .hero__card{max-width:min(100%,310px);padding:16px 18px;border-left:2px solid var(--lime)}
+.hero__card-label{display:flex;align-items:center;gap:7px;color:var(--lime);font-size:8px;font-weight:700;letter-spacing:.14em}
+.hero__card-label svg{width:14px;height:14px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linejoin:round}
+.hero__copy .hero__card b{font-size:15px;line-height:1.2;margin:8px 0 0}
+.hero__card-note{margin-top:5px;color:#c9c9c9;font-size:9px;line-height:1.45}
+.hero__copy .hero__card button{display:flex;align-items:center;justify-content:space-between;gap:14px;width:100%;margin-top:11px;padding:10px 0 0;border:0;border-top:1px solid rgba(255,255,255,.18);background:transparent;color:#fff;font-size:9px;font-weight:700;text-align:left}
+.hero__card button svg{width:15px;height:15px;fill:none;stroke:var(--lime);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;transition:transform .2s}
+.hero__card button:hover svg{transform:translateX(3px)}
