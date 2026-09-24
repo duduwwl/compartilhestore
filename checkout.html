@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#111111">
+  <meta name="robots" content="noindex">
+  <title>Checkout — Compartilhe Store</title>
+  <link rel="icon" href="assets/logo.webp">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="checkout.css">
+</head>
+<body class="checkout-page">
+  <header class="checkout-header">
+    <div class="shell checkout-header__inner">
+      <a class="checkout-back" href="catalogo.html">← <span>Continuar comprando</span></a>
+      <a class="brand" href="index.html"><img src="assets/logo.webp" alt=""><span><b>COMPARTILHE</b><small>STORE</small></span></a>
+      <div class="checkout-safe">⌾ <span>Checkout seguro</span></div>
+    </div>
+  </header>
+
+  <main class="checkout-main">
+    <div class="shell checkout-title">
+      <div><span class="eyebrow">FINALIZE SEU PEDIDO</span><h1>Checkout.</h1></div>
+      <ol class="checkout-progress"><li class="active"><i>1</i>Identificação</li><li><i>2</i>Entrega</li><li><i>3</i>Pagamento</li></ol>
+    </div>
+
+    <div class="shell checkout-layout">
+      <form class="checkout-form" id="checkoutForm" novalidate>
+        <section class="checkout-section" id="identificacao">
+          <div class="checkout-section__head"><span>01</span><div><h2>Seus dados</h2><p>Usaremos essas informações para confirmar o pedido.</p></div></div>
+          <div class="form-grid">
+            <label class="field field--full"><span>E-mail</span><input type="email" id="customerEmail" autocomplete="email" placeholder="voce@email.com" required><small class="field-error">Informe um e-mail válido.</small></label>
+            <label class="field field--full"><span>Nome completo</span><input type="text" id="customerName" autocomplete="name" placeholder="Seu nome e sobrenome" required><small class="field-error">Informe seu nome completo.</small></label>
+            <label class="field"><span>CPF</span><input type="text" id="customerCpf" inputmode="numeric" autocomplete="off" placeholder="000.000.000-00" maxlength="14" required><small class="field-error">Confira o CPF.</small></label>
+            <label class="field"><span>Celular / WhatsApp</span><input type="tel" id="customerPhone" inputmode="tel" autocomplete="tel" placeholder="(35) 99999-9999" maxlength="15" required><small class="field-error">Informe seu celular.</small></label>
+          </div>
+        </section>
+
+        <section class="checkout-section" id="entrega">
+          <div class="checkout-section__head"><span>02</span><div><h2>Como quer receber?</h2><p>Retire grátis ou calcule a entrega saindo de Lavras–MG.</p></div></div>
+          <div class="delivery-tabs">
+            <label><input type="radio" name="deliveryType" value="pickup" checked><span><i>⌂</i><b>Retirar na loja</b><small>Grátis • pronto após confirmação</small></span></label>
+            <label><input type="radio" name="deliveryType" value="delivery"><span><i>↗</i><b>Receber no endereço</b><small>Frete calculado pelo CEP</small></span></label>
+          </div>
+          <div class="pickup-panel" id="pickupPanel">
+            <div class="pickup-map"><span>CS</span></div><div><b>Compartilhe Store — Centro</b><p>Rua Lourenço Menicucci, 220<br>Centro • Lavras–MG • CEP 37200-036</p><small>Seg–Sex, 9h às 18h • Sábado, 9h às 13h</small></div><strong>GRÁTIS</strong>
+          </div>
+          <div class="delivery-panel" id="deliveryPanel" hidden>
+            <div class="form-grid">
+              <label class="field"><span>CEP</span><div class="field-action"><input type="text" id="postalCode" inputmode="numeric" autocomplete="postal-code" placeholder="00000-000" maxlength="9"><button type="button" id="calculateShipping">Calcular</button></div><small class="field-error">Informe um CEP válido.</small></label>
+              <div class="cep-status" id="cepStatus">Origem: Lavras–MG, CEP 37200-036</div>
+              <label class="field field--wide"><span>Endereço</span><input type="text" id="street" autocomplete="address-line1" placeholder="Rua ou avenida"></label>
+              <label class="field field--number"><span>Número</span><input type="text" id="addressNumber" autocomplete="address-line2" placeholder="Nº"></label>
+              <label class="field"><span>Complemento</span><input type="text" id="complement" placeholder="Apto, bloco (opcional)"></label>
+              <label class="field"><span>Bairro</span><input type="text" id="neighborhood" placeholder="Bairro"></label>
+              <label class="field"><span>Cidade</span><input type="text" id="city" autocomplete="address-level2" placeholder="Cidade"></label>
+              <label class="field"><span>Estado</span><input type="text" id="stateUf" autocomplete="address-level1" placeholder="UF" maxlength="2"></label>
+            </div>
+            <div class="shipping-loading" id="shippingLoading" hidden><i></i><span>Consultando transportadoras...</span></div>
+            <div class="shipping-options" id="shippingOptions"></div>
+          </div>
+        </section>
+
+        <section class="checkout-section" id="pagamento">
+          <div class="checkout-section__head"><span>03</span><div><h2>Pagamento</h2><p>Escolha a melhor forma. Seus dados são protegidos.</p></div><em id="paymentMode">Modo demonstração</em></div>
+          <div id="paymentManual">
+            <div class="payment-tabs" role="tablist">
+              <button type="button" class="active" data-payment="pix"><span class="pix-mark">◆</span> Pix</button>
+              <button type="button" data-payment="credit">▰ Crédito</button>
+              <button type="button" data-payment="debit">▰ Débito</button>
+            </div>
+            <div class="payment-panel active" data-panel="pix">
+              <div class="pix-preview"><div class="qr-placeholder"><span>◆</span><small>QR CODE</small></div><div><b>Pix rápido e seguro</b><p>O QR Code e o código Copia e Cola são gerados pelo Mercado Pago após a confirmação.</p><ul><li>Aprovação em poucos segundos</li><li>Vencimento configurável</li><li>Confirmação automática</li></ul></div></div>
+            </div>
+            <div class="payment-panel" data-panel="credit" hidden>
+              <div class="secure-card-note">⌾ Os campos seguros do cartão serão ativados pelas credenciais do Mercado Pago.</div>
+              <div class="form-grid card-fields"><label class="field field--full"><span>Número do cartão</span><input type="text" placeholder="0000 0000 0000 0000" disabled></label><label class="field field--full"><span>Nome impresso no cartão</span><input type="text" placeholder="NOME COMO ESTÁ NO CARTÃO" disabled></label><label class="field"><span>Validade</span><input type="text" placeholder="MM/AA" disabled></label><label class="field"><span>CVV</span><input type="text" placeholder="123" disabled></label><label class="field field--full"><span>Parcelamento</span><select disabled><option>Selecione após informar o cartão</option></select></label></div>
+            </div>
+            <div class="payment-panel" data-panel="debit" hidden><div class="secure-card-note">⌾ Pagamento em uma vez. A autenticação será feita com segurança pelo banco emissor.</div><div class="form-grid card-fields"><label class="field field--full"><span>Número do cartão de débito</span><input type="text" placeholder="0000 0000 0000 0000" disabled></label><label class="field"><span>Validade</span><input type="text" placeholder="MM/AA" disabled></label><label class="field"><span>CVV</span><input type="text" placeholder="123" disabled></label></div></div>
+          </div>
+          <div id="paymentBrick" hidden><div id="paymentBrickContainer"></div></div>
+          <label class="terms-check"><input type="checkbox" id="termsCheck" required><span></span><p>Li e concordo com os <a href="#">termos de compra</a>, política de privacidade e condições de troca.</p></label>
+        </section>
+        <button class="place-order" id="placeOrder" type="submit"><span>Finalizar pedido</span><strong id="placeOrderTotal">R$ 0,00 →</strong></button>
+        <div class="checkout-assurance"><span>⌾ Ambiente protegido</span><span>✓ Compra verificada</span><span>◇ Seus dados não são armazenados</span></div>
+      </form>
+
+      <aside class="order-summary">
+        <div class="order-summary__head"><div><span class="eyebrow">RESUMO</span><h2>Seu pedido</h2></div><a href="catalogo.html">Editar</a></div>
+        <div class="summary-items" id="summaryItems"></div>
+        <div class="coupon"><input type="text" id="couponInput" placeholder="Cupom de desconto"><button type="button" id="couponButton">Aplicar</button></div>
+        <div class="summary-totals"><p><span>Subtotal</span><b id="summarySubtotal">R$ 0,00</b></p><p><span>Entrega</span><b id="summaryShipping">Grátis</b></p><p><span>Tributos</span><b>Inclusos</b></p><p class="summary-total"><span>Total</span><strong id="summaryTotal">R$ 0,00</strong></p><small id="installmentText">ou em até 3x sem juros</small></div>
+        <div class="summary-help"><span>?</span><p><b>Precisa de ajuda?</b><small>Fale com nossa equipe pelo WhatsApp.</small></p><a href="https://wa.me/message/FGE5K6V6CN2TH1" target="_blank" rel="noreferrer">→</a></div>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="checkout-footer"><div class="shell"><span>© 2026 Compartilhe Store</span><span>Rua Lourenço Menicucci, 220 • Lavras–MG</span><span>Privacidade • Termos</span></div></footer>
+
+  <div class="checkout-modal" id="checkoutModal" aria-hidden="true"><div><button id="closeCheckoutModal">×</button><span class="modal-symbol">⌾</span><h2>Integração pronta.</h2><p>O checkout está em modo demonstração. Para receber pagamentos reais, configure as credenciais do Mercado Pago e o token do Melhor Envio no servidor.</p><div class="setup-list"><span>✓ Formulário e validações</span><span>✓ Endereço por CEP</span><span>✓ Frete com origem em Lavras</span><span>✓ Rotas seguras de pagamento</span></div><a href="catalogo.html" class="btn btn--dark">Voltar ao catálogo</a></div></div>
+  <div class="checkout-toast" id="checkoutToast" role="status" aria-live="polite"></div>
+  <script src="checkout.js"></script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Catálogo completo da Compartilhe Store — moda masculina em Lavras, MG.">
+  <meta name="theme-color" content="#111111">
+  <title>Catálogo — Compartilhe Store</title>
+  <link rel="icon" href="assets/logo.webp">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="pages.css">
+</head>
+<body class="catalog-page">
+  <div class="announcement"><div class="shell announcement__inner"><span>Retire na loja em Lavras</span><i></i><span>Atendimento pelo WhatsApp</span><i></i><span>Novidades toda semana</span></div></div>
+  <header class="site-header" id="inicio">
+    <div class="shell nav">
+      <button class="icon-btn menu-btn" id="menuBtn" aria-label="Abrir menu"><svg class="dots-icon" viewBox="0 0 24 24"><circle cx="5" cy="12" r="1.5"/><circle cx="12" cy="12" r="1.5"/><circle cx="19" cy="12" r="1.5"/></svg></button>
+      <a class="brand" href="index.html" aria-label="Compartilhe Store — início"><img src="assets/logo.webp" alt=""><span><b>COMPARTILHE</b><small>STORE</small></span></a>
+      <div class="nav-actions"><button class="icon-btn search-toggle" id="searchToggle" aria-label="Buscar"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4 4"/></svg></button><button class="icon-btn cart-toggle" id="cartToggle" aria-label="Abrir carrinho"><svg viewBox="0 0 24 24"><path d="M3 4h2l2.1 10.2a2 2 0 0 0 2 1.6h7.8a2 2 0 0 0 2-1.6L20 8H7M10 20h.01M17 20h.01"/></svg><span class="cart-count" id="cartCount">0</span></button></div>
+    </div>
+    <div class="search-panel" id="searchPanel"><div class="shell search-panel__inner"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4 4"/></svg><input id="globalSearch" type="search" placeholder="O que você procura?" autocomplete="off" aria-label="Buscar produtos"><button id="closeSearch" aria-label="Fechar busca">ESC</button></div></div>
+  </header>
+
+  <main>
+    <section class="catalog-hero">
+      <div class="shell"><span class="eyebrow">COMPARTILHE STORE</span><h1>Catálogo<br><em>completo.</em></h1><div><p>25 escolhas para montar seu kit. Fotos limpas, tamanhos claros e compra rápida.</p><span>Lavras • MG</span></div></div>
+    </section>
+
+    <section class="section catalog" id="produtos">
+      <div class="shell">
+        <div class="section-heading catalog-heading"><div><span class="eyebrow">TODOS OS PRODUTOS</span><h2>Encontre o seu.</h2></div><button class="filter-mobile" id="filterMobile"><span>☷</span> Filtrar</button></div>
+        <div class="catalog-toolbar"><div class="category-tabs" id="categoryTabs" role="tablist" aria-label="Filtrar por categoria"></div><label class="sort-label">Ordenar por<select id="sortSelect"><option value="featured">Destaques</option><option value="newest">Mais recentes</option><option value="price-low">Menor preço</option><option value="price-high">Maior preço</option><option value="name">Nome A–Z</option></select></label></div>
+        <div class="catalog-layout">
+          <aside class="filters" id="filters"><div class="filters__head"><b>Filtros</b><button id="closeFilters">×</button></div><fieldset><legend>Categoria</legend><div id="categoryChecks"></div></fieldset><fieldset><legend>Tamanho</legend><div class="size-filters" id="sizeFilters"></div></fieldset><fieldset><legend>Faixa de preço</legend><div class="price-row"><span>Até</span><output id="priceOutput">R$ 300</output></div><input type="range" id="priceRange" min="40" max="300" value="300" step="10"></fieldset><label class="switch-row"><span>Apenas ofertas</span><input type="checkbox" id="saleOnly"><i></i></label><button class="clear-filters" id="clearFilters">Limpar filtros</button></aside>
+          <div class="products-area"><div class="results-row"><span id="resultCount">0 produtos</span><span id="activeFilterText">Todos os produtos</span></div><div class="product-grid" id="productGrid"></div><div class="empty-state" id="emptyState" hidden><span>◇</span><h3>Nenhum produto encontrado</h3><p>Tente remover um filtro ou buscar outro termo.</p><button class="btn btn--dark" id="emptyClear">Limpar filtros</button></div></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer footer--compact"><div class="shell footer__bottom"><span>© 2026 Compartilhe Store • Rua Lourenço Menicucci, 220 — Lavras, MG</span><a href="index.html">Voltar para o início ↑</a></div></footer>
+  <a class="whatsapp-float" href="https://wa.me/message/FGE5K6V6CN2TH1" target="_blank" rel="noreferrer" aria-label="Falar no WhatsApp"><span>↗</span><em>Fale com a gente</em></a>
+  <button class="mobile-cart-bar" id="mobileCartBar"><span><b id="mobileCartCount">0 itens</b><small>Ver carrinho</small></span><strong id="mobileCartTotal">R$ 0,00</strong></button>
+
+  <div class="overlay" id="overlay"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Carrinho de compras" aria-hidden="true"><div class="drawer-head"><div><span class="eyebrow">SEU CARRINHO</span><h2>Quase lá.</h2></div><button id="closeCart" aria-label="Fechar carrinho">×</button></div><div class="cart-items" id="cartItems"></div><div class="cart-empty" id="cartEmpty"><span>◇</span><h3>Seu carrinho está vazio</h3><p>Descubra o que acabou de chegar.</p><button class="btn btn--dark" id="keepShopping">Ver produtos</button></div><div class="cart-footer" id="cartFooter"><div class="free-shipping"><span>✓</span><p><b>Retirada grátis disponível</b><small>Combine o horário pelo WhatsApp</small></p></div><div class="subtotal"><span>Subtotal</span><b id="cartSubtotal">R$ 0,00</b></div><small>Frete e prazo calculados no checkout.</small><button class="btn btn--whatsapp" id="checkoutButton">Ir para checkout seguro <span>→</span></button><button class="continue-shopping" id="continueShopping">Continuar comprando</button></div></aside>
+  <section class="product-modal" id="productModal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modalProductName"><button class="modal-close" id="modalClose" aria-label="Fechar">×</button><div class="modal-product-image"><img id="modalImage" src="" alt=""><span id="modalBadge"></span></div><div class="modal-product-info"><span class="eyebrow" id="modalCategory"></span><h2 id="modalProductName"></h2><div class="modal-rating">★★★★★ <span>5.0 • produto da loja</span></div><div class="modal-price"><b id="modalPrice"></b><del id="modalOldPrice"></del><span id="modalInstallments"></span></div><p id="modalDescription"></p><div class="option-block"><div><b>Escolha o tamanho</b><button id="sizeGuide">Guia de tamanhos</button></div><div class="size-options" id="modalSizes"></div></div><div class="modal-actions"><button class="btn btn--dark" id="modalAdd">Adicionar ao carrinho</button><button class="modal-whatsapp" id="modalWhatsapp" aria-label="Perguntar no WhatsApp">WA</button></div><div class="modal-benefits"><span>✓ Retirada na loja</span><span>◇ Compra segura</span></div></div></section>
+  <nav class="mobile-menu" id="mobileMenu" aria-hidden="true"><div class="mobile-menu__head"><a class="brand" href="index.html"><img src="assets/logo.webp" alt=""><span><b>COMPARTILHE</b><small>STORE</small></span></a><button id="closeMenu">×</button></div><a href="index.html">Página inicial <span>→</span></a><a href="catalogo.html">Catálogo completo <span>→</span></a><a href="index.html#categorias">Categorias <span>→</span></a><a href="index.html#sobre">A loja <span>→</span></a><div><small>PRECISA DE AJUDA?</small><a href="https://wa.me/message/FGE5K6V6CN2TH1" target="_blank" rel="noreferrer">Chamar no WhatsApp ↗</a></div></nav>
+  <div class="toast" id="toast" role="status" aria-live="polite"><span>✓</span><p><b>Produto adicionado</b><small id="toastText"></small></p></div>
+  <script src="app.js"></script>
+</body>
+</html>

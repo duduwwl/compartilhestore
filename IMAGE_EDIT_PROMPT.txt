@@ -1,0 +1,6 @@
+Use case: precise-object-edit
+Asset type: e-commerce product catalog contact sheet
+Input images: Image 1 is the edit target containing exactly 25 product-photo cells in a precise 5 by 5 grid.
+Primary request: Clean every cell into professional e-commerce photography. Remove only Instagram/story interface, promotional captions, price stickers, response bars, watermarks, hands, people, hangers, and environmental backgrounds. Isolate the actual merchandise in each cell and place it centered on a pure white (#FFFFFF) studio background with a soft natural contact shadow.
+Composition/framing: Preserve the exact 5-by-5 grid, row order, and cell boundaries. Fit each complete product inside its original cell with generous, even padding; no cropping of garments or shoes.
+Constraints: Keep the exact real product colors, shapes, patterns, garment graphics, team crests, and brand marks that are physically printed on the merchandise. Do not redesign, substitute, combine, rearrange, add, or remove merchandise. Do not add any labels, prices, captions, typography, badges, logos, borders, or watermarks outside the physical products. Exactly one cleaned result per original cell. Pure white background in every cell.
