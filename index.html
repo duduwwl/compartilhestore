@@ -1,1 +1,261 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Compartilhe Store — moda masculina, kits, futebol, calçados e acessórios em Lavras, MG.">
+  <meta name="theme-color" content="#111111">
+  <title>Compartilhe Store — Seu estilo, sua marca</title>
+  <link rel="icon" href="assets/logo.webp">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="announcement">
+    <div class="shell announcement__inner">
+      <span>Retire na loja em Lavras</span><i></i><span>Atendimento pelo WhatsApp</span><i></i><span>Novidades toda semana</span>
+    </div>
+  </div>
 
+  <header class="site-header" id="inicio">
+    <div class="shell nav">
+      <button class="icon-btn menu-btn" id="menuBtn" aria-label="Abrir menu">
+        <svg class="dots-icon" viewBox="0 0 24 24"><circle cx="5" cy="12" r="1.5"/><circle cx="12" cy="12" r="1.5"/><circle cx="19" cy="12" r="1.5"/></svg>
+      </button>
+      <a class="brand" href="#inicio" aria-label="Compartilhe Store — início">
+        <img src="assets/logo.webp" alt="">
+        <span><b>COMPARTILHE</b><small>STORE</small></span>
+      </a>
+      <div class="nav-actions">
+        <button class="icon-btn search-toggle" id="searchToggle" aria-label="Buscar">
+          <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4 4"/></svg>
+        </button>
+        <button class="icon-btn cart-toggle" id="cartToggle" aria-label="Abrir carrinho">
+          <svg viewBox="0 0 24 24"><path d="M3 4h2l2.1 10.2a2 2 0 0 0 2 1.6h7.8a2 2 0 0 0 2-1.6L20 8H7M10 20h.01M17 20h.01"/></svg>
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+      </div>
+    </div>
+    <div class="search-panel" id="searchPanel">
+      <div class="shell search-panel__inner">
+        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4 4"/></svg>
+        <input id="globalSearch" type="search" placeholder="O que você procura?" autocomplete="off" aria-label="Buscar produtos">
+        <button id="closeSearch" aria-label="Fechar busca">ESC</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="novidades">
+      <div class="shell hero__grid">
+        <div class="hero__copy reveal">
+          <span class="eyebrow">NOVA COLEÇÃO • 2026</span>
+          <h1>Seu estilo.<br><em>Sua presença.</em></h1>
+          <p>Peças que acompanham sua rotina — do street ao futebol, com atitude e preço justo.</p>
+          <div class="hero__actions">
+            <a class="btn btn--dark" href="catalogo.html">Comprar agora <span>↗</span></a>
+            <a class="text-link" href="#categorias">Explorar categorias <span>→</span></a>
+          </div>
+          <div class="hero__proof">
+            <div class="avatars"><span>CS</span><span>CS</span><span>CS</span></div>
+            <div><b>+3.900 clientes conectados</b><small>Confira também no Instagram</small></div>
+          </div>
+        </div>
+        <div class="hero__visual reveal">
+          <div class="hero__image"><img src="assets/products/produto-15.webp" alt="Conjunto street preto Compartilhe Store"></div>
+          <div class="hero__tag"><span>Novo drop</span><b>STREET<br>ESSENTIALS</b></div>
+          <div class="hero__card">
+            <span>DESTAQUE</span><b>Conjunto Street Black</b><small>Conforto que chama atenção.</small>
+            <button class="quick-view-trigger" data-id="15">Ver produto →</button>
+          </div>
+          <span class="hero__index">01 / 03</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="benefits" aria-label="Benefícios">
+      <div class="shell benefits__grid">
+        <article><span class="benefit-icon">↗</span><div><b>Retirada sem frete</b><small>Na loja em Lavras, MG</small></div></article>
+        <article><span class="benefit-icon">◇</span><div><b>Compra fácil</b><small>Checkout completo no site</small></div></article>
+        <article><span class="benefit-icon">✓</span><div><b>Atendimento próximo</b><small>Ajuda para escolher seu kit</small></div></article>
+        <article><span class="benefit-icon">↻</span><div><b>Troca facilitada</b><small>Consulte condições da loja</small></div></article>
+      </div>
+    </section>
+
+    <section class="section categories" id="categorias">
+      <div class="shell">
+        <div class="section-heading reveal">
+          <div><span class="eyebrow">COMPRE POR ESTILO</span><h2>Do seu jeito.</h2></div>
+          <p>Escolhas certeiras para montar o kit completo.</p>
+        </div>
+        <div class="category-grid">
+          <button class="category-card category-card--large reveal" data-category="Kits">
+            <img src="assets/products-clean/produto-25.webp" alt="Kit Mizuno em fundo branco">
+            <span><small>KITS COMPLETOS</small><b>Pronto para sair.</b><em>Ver produtos →</em></span>
+          </button>
+          <button class="category-card reveal" data-category="Futebol">
+            <img src="assets/products-clean/produto-17.webp" alt="Kit Manchester City em fundo branco">
+            <span><small>FUTEBOL</small><b>Vista sua paixão.</b><em>Ver produtos →</em></span>
+          </button>
+          <button class="category-card reveal" data-category="Calçados">
+            <img src="assets/products-clean/produto-22.webp" alt="Chuteira turquesa em fundo branco">
+            <span><small>CALÇADOS</small><b>Performance no pé.</b><em>Ver produtos →</em></span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section catalog" id="produtos">
+      <div class="shell">
+        <div class="section-heading catalog-heading reveal">
+          <div><span class="eyebrow">ESCOLHIDOS PARA VOCÊ</span><h2>Mais vendidos</h2></div>
+          <button class="filter-mobile" id="filterMobile"><span>☷</span> Filtrar</button>
+        </div>
+        <div class="catalog-toolbar">
+          <div class="category-tabs" id="categoryTabs" role="tablist" aria-label="Filtrar por categoria"></div>
+          <label class="sort-label">Ordenar por
+            <select id="sortSelect">
+              <option value="featured">Destaques</option>
+              <option value="newest">Mais recentes</option>
+              <option value="price-low">Menor preço</option>
+              <option value="price-high">Maior preço</option>
+              <option value="name">Nome A–Z</option>
+            </select>
+          </label>
+        </div>
+        <div class="catalog-layout">
+          <aside class="filters" id="filters">
+            <div class="filters__head"><b>Filtros</b><button id="closeFilters">×</button></div>
+            <fieldset>
+              <legend>Categoria</legend>
+              <div id="categoryChecks"></div>
+            </fieldset>
+            <fieldset>
+              <legend>Tamanho</legend>
+              <div class="size-filters" id="sizeFilters"></div>
+            </fieldset>
+            <fieldset>
+              <legend>Faixa de preço</legend>
+              <div class="price-row"><span>Até</span><output id="priceOutput">R$ 300</output></div>
+              <input type="range" id="priceRange" min="40" max="300" value="300" step="10">
+            </fieldset>
+            <label class="switch-row"><span>Apenas ofertas</span><input type="checkbox" id="saleOnly"><i></i></label>
+            <button class="clear-filters" id="clearFilters">Limpar filtros</button>
+          </aside>
+          <div class="products-area">
+            <div class="results-row"><span id="resultCount">0 produtos</span><span id="activeFilterText">Todos os produtos</span></div>
+            <div class="product-grid" id="productGrid"></div>
+            <div class="empty-state" id="emptyState" hidden>
+              <span>◇</span><h3>Nenhum produto encontrado</h3><p>Tente remover um filtro ou buscar outro termo.</p><button class="btn btn--dark" id="emptyClear">Limpar filtros</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="promo-section">
+      <div class="shell promo-card reveal">
+        <div class="promo-card__image"><img src="assets/products-clean/produto-02.webp" alt="Trio de camisetas em fundo branco"></div>
+        <div class="promo-card__copy">
+          <span class="eyebrow">OFERTA DO DROP</span>
+          <h2>Leve 3.<br>Pague menos.</h2>
+          <p>Monte seu combo com camisetas ou bermudas selecionadas por <strong>R$ 99,99</strong>.</p>
+          <button class="btn btn--light category-jump" data-category="Camisetas">Ver a seleção <span>↗</span></button>
+        </div>
+        <div class="promo-card__stamp"><b>3</b><span>POR<br>99,99</span></div>
+      </div>
+    </section>
+
+    <section class="section editorial" id="sobre">
+      <div class="shell editorial__grid">
+        <div class="editorial__image reveal"><img src="assets/products/produto-13.webp" alt="Look street Compartilhe Store"><span>LAVRAS • MG</span></div>
+        <div class="editorial__copy reveal">
+          <span class="eyebrow">MAIS QUE ROUPA</span>
+          <h2>Compartilhe<br><em>seu estilo.</em></h2>
+          <p>A Compartilhe Store nasceu em Lavras para aproximar você das peças que têm a sua cara. Curadoria atual, atendimento de verdade e aquele preço que cabe no kit.</p>
+          <p>Compre online e combine a retirada na loja, na <strong>Rua Lourenço Menicucci, 220</strong>.</p>
+          <a class="text-link" href="https://www.instagram.com/csstorelavras/" target="_blank" rel="noreferrer">Conheça nosso Instagram <span>↗</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="social-proof">
+      <div class="shell">
+        <div class="section-heading section-heading--center reveal"><span class="eyebrow">QUEM COMPRA, COMPARTILHA</span><h2>Looks da comunidade.</h2></div>
+        <div class="reviews">
+          <article class="review reveal"><div class="stars">★★★★★</div><p>“Atendimento top e muita variedade. Montei o kit inteiro sem perder tempo.”</p><div><span>RM</span><b>Rafael M.<small>Cliente em Lavras</small></b></div></article>
+          <article class="review review--dark reveal"><div class="stars">★★★★★</div><p>“As peças vestem muito bem. Chamei no WhatsApp e já deixaram tudo separado.”</p><div><span>JP</span><b>João P.<small>Compra verificada</small></b></div></article>
+          <article class="review reveal"><div class="stars">★★★★★</div><p>“Loja organizada, preço bom e novidade toda semana. Recomendo demais.”</p><div><span>LC</span><b>Lucas C.<small>Cliente recorrente</small></b></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section faq-section">
+      <div class="shell faq-grid">
+        <div class="faq-intro reveal"><span class="eyebrow">TIRE SUAS DÚVIDAS</span><h2>É simples<br>comprar.</h2><p>Se ainda precisar de ajuda, fale com a gente no WhatsApp.</p><a class="text-link" href="https://wa.me/message/FGE5K6V6CN2TH1" target="_blank" rel="noreferrer">Chamar no WhatsApp <span>↗</span></a></div>
+        <div class="accordion" id="accordion">
+          <details open><summary>Como funciona a compra online?<span>+</span></summary><p>Adicione os produtos ao carrinho, escolha tamanho e quantidade e finalize com segurança no checkout do site.</p></details>
+          <details><summary>Posso retirar na loja?<span>+</span></summary><p>Sim. Escolha retirada grátis no checkout e busque na Rua Lourenço Menicucci, 220, em Lavras–MG, após a confirmação.</p></details>
+          <details><summary>Quais formas de pagamento?<span>+</span></summary><p>O checkout foi preparado para Pix e cartões de crédito ou débito processados com segurança pelo Mercado Pago.</p></details>
+          <details><summary>Como escolher o tamanho certo?<span>+</span></summary><p>Selecione o tamanho no produto. Se estiver em dúvida, envie suas medidas pelo WhatsApp e nossa equipe ajuda você.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="newsletter">
+      <div class="shell newsletter__inner reveal">
+        <div><span class="eyebrow">FIQUE POR DENTRO</span><h2>Chegou novidade?<br>Você fica sabendo.</h2></div>
+        <form id="newsletterForm"><label for="emailInput">Seu melhor e-mail</label><div><input id="emailInput" type="email" placeholder="voce@email.com" required><button type="submit" aria-label="Cadastrar e-mail">→</button></div><small>Sem spam. Só lançamentos e ofertas da loja.</small></form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="shell footer__grid">
+      <div class="footer__brand"><a class="brand brand--footer" href="#inicio"><img src="assets/logo.webp" alt=""><span><b>COMPARTILHE</b><small>STORE</small></span></a><p>Moda masculina com atitude.<br>Seu kit está aqui.</p><div class="social-links"><a href="https://www.instagram.com/csstorelavras/" target="_blank" rel="noreferrer" aria-label="Instagram">IG</a><a href="https://wa.me/message/FGE5K6V6CN2TH1" target="_blank" rel="noreferrer" aria-label="WhatsApp">WA</a></div></div>
+      <div><b>LOJA</b><a href="#novidades">Novidades</a><a href="catalogo.html">Catálogo completo</a><a href="#categorias">Categorias</a><a href="#sobre">Nossa história</a></div>
+      <div><b>ATENDIMENTO</b><a href="#">Trocas e devoluções</a><a href="#">Guia de tamanhos</a><a href="#">Política de privacidade</a><a href="https://wa.me/message/FGE5K6V6CN2TH1" target="_blank" rel="noreferrer">Fale conosco</a></div>
+      <div><b>VISITE A LOJA</b><p>Rua Lourenço Menicucci, 220<br>Lavras — MG</p><p>Seg–Sex, 9h às 18h<br>Sábado, 9h às 13h</p><a class="footer-map" href="https://www.google.com/maps/search/?api=1&query=Rua+Louren%C3%A7o+Menicucci+220+Lavras+MG" target="_blank" rel="noreferrer">Ver no mapa ↗</a></div>
+    </div>
+    <div class="shell footer__bottom"><span>© 2026 Compartilhe Store</span><span>Feito para vestir sua melhor versão.</span></div>
+  </footer>
+
+  <a class="whatsapp-float" href="https://wa.me/message/FGE5K6V6CN2TH1" target="_blank" rel="noreferrer" aria-label="Falar no WhatsApp"><span>↗</span><em>Fale com a gente</em></a>
+  <button class="mobile-cart-bar" id="mobileCartBar"><span><b id="mobileCartCount">0 itens</b><small>Ver carrinho</small></span><strong id="mobileCartTotal">R$ 0,00</strong></button>
+
+  <div class="overlay" id="overlay"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Carrinho de compras" aria-hidden="true">
+    <div class="drawer-head"><div><span class="eyebrow">SEU CARRINHO</span><h2>Quase lá.</h2></div><button id="closeCart" aria-label="Fechar carrinho">×</button></div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-empty" id="cartEmpty"><span>◇</span><h3>Seu carrinho está vazio</h3><p>Descubra o que acabou de chegar.</p><button class="btn btn--dark" id="keepShopping">Ver produtos</button></div>
+    <div class="cart-footer" id="cartFooter">
+      <div class="free-shipping"><span>✓</span><p><b>Retirada grátis disponível</b><small>Combine o horário pelo WhatsApp</small></p></div>
+      <div class="subtotal"><span>Subtotal</span><b id="cartSubtotal">R$ 0,00</b></div>
+      <small>O valor final e a disponibilidade serão confirmados pela loja.</small>
+      <button class="btn btn--whatsapp" id="checkoutButton">Ir para checkout seguro <span>→</span></button>
+      <button class="continue-shopping" id="continueShopping">Continuar comprando</button>
+    </div>
+  </aside>
+
+  <section class="product-modal" id="productModal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modalProductName">
+    <button class="modal-close" id="modalClose" aria-label="Fechar">×</button>
+    <div class="modal-product-image"><img id="modalImage" src="" alt=""><span id="modalBadge"></span></div>
+    <div class="modal-product-info">
+      <span class="eyebrow" id="modalCategory"></span><h2 id="modalProductName"></h2><div class="modal-rating">★★★★★ <span>5.0 • produto da loja</span></div>
+      <div class="modal-price"><b id="modalPrice"></b><del id="modalOldPrice"></del><span id="modalInstallments"></span></div>
+      <p id="modalDescription"></p>
+      <div class="option-block"><div><b>Escolha o tamanho</b><button id="sizeGuide">Guia de tamanhos</button></div><div class="size-options" id="modalSizes"></div></div>
+      <div class="modal-actions"><button class="btn btn--dark" id="modalAdd">Adicionar ao carrinho</button><button class="modal-whatsapp" id="modalWhatsapp" aria-label="Perguntar no WhatsApp">WA</button></div>
+      <div class="modal-benefits"><span>✓ Retirada na loja</span><span>◇ Compra segura pelo WhatsApp</span></div>
+    </div>
+  </section>
+
+  <nav class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <div class="mobile-menu__head"><a class="brand" href="#inicio"><img src="assets/logo.webp" alt=""><span><b>COMPARTILHE</b><small>STORE</small></span></a><button id="closeMenu">×</button></div>
+    <a href="#novidades">Novidades <span>→</span></a><a href="catalogo.html">Catálogo completo <span>→</span></a><a href="#categorias">Categorias <span>→</span></a><a href="#sobre">A loja <span>→</span></a>
+    <div><small>PRECISA DE AJUDA?</small><a href="https://wa.me/message/FGE5K6V6CN2TH1" target="_blank" rel="noreferrer">Chamar no WhatsApp ↗</a></div>
+  </nav>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"><span>✓</span><p><b>Produto adicionado</b><small id="toastText"></small></p></div>
+  <script src="app.js"></script>
+</body>
+</html>
