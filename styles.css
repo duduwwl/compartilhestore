@@ -36,3 +36,57 @@
 .hero__copy .hero__card{position:relative;right:auto;bottom:auto;width:max-content;max-width:min(100%,250px);padding:13px 16px;margin-top:22px;background:#171717;color:#fff}
 .hero__copy .hero__card b{font-size:14px;margin:7px 0 0}
 .hero__copy .hero__card button{padding:9px 0 0;font-size:9px}
+
+/* Keep directional marks in text presentation (not Apple emoji glyphs). */
+.text-link span,.whatsapp-float>span,.mobile-menu>a span,
+.delivery-tabs i,.summary-help>a{font-family:"Segoe UI Symbol",Arial,sans-serif;font-variant-emoji:text}
+
+/* Responsive finishing: preserve readable spacing and prevent sideways page drift. */
+html,body{max-width:100%;overflow-x:clip}
+body{font-variant-emoji:text}
+img,svg{max-width:100%}
+button,a,input,select{touch-action:manipulation}
+.icon-btn{flex:0 0 42px}
+.category-card img{background:#fff}
+.product-info{min-width:0}
+.product-name{overflow-wrap:anywhere}
+@media(max-width:1050px){
+  .hero{min-height:0}
+  .hero__grid{min-height:0}
+  .hero__visual{min-height:430px}
+  .category-grid{grid-template-rows:clamp(210px,27vw,260px) clamp(210px,27vw,260px)}
+  .product-media{height:clamp(280px,38vw,390px)}
+  .benefits article{padding-inline:14px}
+}
+@media(max-width:760px){
+  .hero{padding-top:24px}
+  .hero__grid{gap:26px}
+  .hero__copy .hero__card{width:min(100%,260px);max-width:100%;margin-top:22px}
+  .hero__visual{height:clamp(360px,112vw,500px);min-height:0}
+  .hero__image img{object-position:center 24%}
+  .category-grid{margin-left:-14px;padding-left:14px;gap:12px}
+  .category-card,.category-card--large{min-width:min(82vw,380px);height:clamp(370px,112vw,460px)}
+  .category-card img{padding:18px 20px 60px}
+  .product-media{height:clamp(190px,58vw,250px)}
+  .product-info{padding-top:11px}
+  .product-category{font-size:8px}
+  .product-price{flex-wrap:wrap;gap:5px}
+  .product-installments{font-size:8px}
+  .whatsapp-float{bottom:84px}
+  .mobile-cart-bar{padding-inline:15px}
+}
+@media(max-width:390px){
+  .hero h1{font-size:clamp(42px,12.5vw,48px)}
+  .hero__actions{gap:15px}
+  .hero__visual{height:clamp(340px,105vw,410px)}
+  .benefits article{gap:8px;padding:14px 6px!important}
+  .benefit-icon{width:29px;height:29px;flex:0 0 29px}
+  .category-card,.category-card--large{min-width:86vw;height:390px}
+  .category-card span{left:18px;right:18px;bottom:18px}
+  .product-grid{gap:24px 8px}
+  .product-media{height:clamp(170px,54vw,210px)}
+  .product-badge{left:7px;top:7px;padding:6px 7px;font-size:7px}
+  .wishlist{right:7px;top:7px;width:30px;height:30px}
+  .quick-add{left:7px;right:7px;bottom:7px}
+  .footer__grid{gap:32px 14px}
+}

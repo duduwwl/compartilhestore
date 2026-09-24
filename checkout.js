@@ -13,7 +13,7 @@ const cleanDigits=value=>value.replace(/\D/g,'');
 function renderSummary(){
   if(!cart.length){$('#summaryItems').innerHTML='<div class="summary-empty"><h3>Seu carrinho está vazio</h3><p>Adicione produtos antes de finalizar.</p><a class="btn btn--dark" href="catalogo.html">Ver catálogo</a></div>';$('#placeOrder').disabled=true}
   else $('#summaryItems').innerHTML=cart.map(item=>{const [name,price]=productData[item.id];return `<div class="summary-item"><img src="assets/products-clean/produto-${String(item.id).padStart(2,'0')}.webp" alt="${name}"><div><b>${name}</b><small>Tam. ${item.size} • Qtd. ${item.qty}</small></div><strong>${money(price*item.qty)}</strong></div>`}).join('');
-  $('#summarySubtotal').textContent=money(subtotal());$('#summaryShipping').textContent=shippingCost?money(shippingCost):'Grátis';$('#summaryTotal').textContent=money(total());$('#placeOrderTotal').textContent=`${money(total())} →`;$('#installmentText').textContent=`ou 3x de ${money(total()/3)} sem juros`;
+  $('#summarySubtotal').textContent=money(subtotal());$('#summaryShipping').textContent=shippingCost?money(shippingCost):'Grátis';$('#summaryTotal').textContent=money(total());$('#placeOrderTotal').textContent=`${money(total())} →︎`;$('#installmentText').textContent=`ou 3x de ${money(total()/3)} sem juros`;
 }
 
 function setDelivery(type){deliveryType=type;$('#pickupPanel').hidden=type!=='pickup';$('#deliveryPanel').hidden=type!=='delivery';if(type==='pickup'){shippingCost=0;shippingChoice={name:'Retirada na loja',price:0,days:0};renderSummary();refreshPaymentBrick()}}
