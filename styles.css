@@ -104,3 +104,12 @@ button,a,input,select{touch-action:manipulation}
 .hero__copy .hero__card button{display:flex;align-items:center;justify-content:space-between;gap:14px;width:100%;margin-top:11px;padding:10px 0 0;border:0;border-top:1px solid rgba(255,255,255,.18);background:transparent;color:#fff;font-size:9px;font-weight:700;text-align:left}
 .hero__card button svg{width:15px;height:15px;fill:none;stroke:var(--lime);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;transition:transform .2s}
 .hero__card button:hover svg{transform:translateX(3px)}
+
+/* Show the entire vertical lifestyle photo instead of cropping it into a wide frame. */
+.hero__visual{width:min(100%,440px);height:min(70vw,700px);justify-self:end;background:#e8e5de}
+.hero__image{background:#e8e5de}
+.hero__image:after{background:none}
+.hero__image img{object-fit:contain;object-position:center}
+@media(max-width:760px){
+  .hero__visual{width:100%;height:clamp(600px,160vw,740px);justify-self:center}
+}
